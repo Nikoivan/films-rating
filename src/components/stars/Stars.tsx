@@ -1,24 +1,14 @@
 import Star from "../star/Star";
-import { Film, Films } from "../../types/types";
+import { Film, StarsProps } from "../../types/types";
 import { FC } from "react";
 
-type Test = {
-  films: Films;
-};
-
-export default function Stars({ films }: Test) {
-  console.log(films);
+export default function Stars({ films }: StarsProps) {
   return (
-    <ul>
-      {films.map((el: number, id: number) => (
-        <Star key={id} />
-      ))}
+    <ul className="card-body-stars">
+      {films.map(
+        (el, idx) =>
+          el.starsCount >= 1 && el.starsCount <= 5 && <Star key={idx} />
+      )}
     </ul>
   );
 }
-
-/* <ul>
-      {films.map((el: number) => (
-        <Star key={el} />
-      ))}
-    </ul>*/

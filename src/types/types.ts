@@ -5,4 +5,8 @@ export type Film = {
   starsCount: number;
 };
 
-export type Films = Array<Film>;
+export type Films = Film[];
+
+export type StarsProps = {
+  films: Films;
+};

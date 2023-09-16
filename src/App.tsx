@@ -1,15 +1,16 @@
 import { useState } from "react";
 import Stars from "./components/stars/Stars";
 import "./App.css";
-import { Films, Film } from "./types/types";
+import { Film } from "./types/types";
 
-const arr: Films = [
+const films: Film[] = [
   { name: "Супермэн", price: 1299, imgUrl: "...", starsCount: 1 },
-  { name: "Одинокий странник", price: 1299, imgUrl: "...", starsCount: 2 },
+  { name: "Одинокий странник", price: 799, imgUrl: "...", starsCount: 2 },
+  { name: "Пустошь", price: 1699, imgUrl: "...", starsCount: 0 },
 ];
 
 function App() {
-  return <Stars films={arr} />;
+  return <Stars films={films} />;
 }
 
 export default App;
